@@ -7,3 +7,14 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+puts " creating restaurants..."
+
+5.times do
+  Restaurant.create(
+    name: "Restaurant #{rand(1000)}",
+    address: "123 Main St",
+    phone_number: "555-1234",
+    category: ["chinese", "italian", "japanese", "french", "belgian"].sample)
+end
+
+puts "Restaurants seeds created ! Well done !"
